@@ -1,0 +1,14 @@
+<div>
+{{#isteacher}}
+		<span class="deletebookmark" data-id="{{id}}">&times;</span>	
+{{/isteacher}}
+{{^isteacher}}
+	{{#permission}} 	
+		<span style="visibility: hidden" class="deletebookmark" data-id="{{id}}">&times;</span> 
+	{{/permission}}
+	{{^permission}} 
+		<span class="deletebookmark" data-id="{{id}}">&times;</span> 
+	{{/permission}}
+{{/isteacher}}
+	<a href="#t={{videoposition}}" data-position="{{videoposition}}">{{bookmarkpositionvisible}}, {{text}} </a>
+</div>
